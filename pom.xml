@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.nestedvar.Discord</groupId>
+    <artifactId>Quiver</artifactId>
+    <version>0.0.1-DEV</version>
+
+    <name>Quiver</name>
+    <developers>
+        <developer>
+            <name>Nathaniel "ExZiByte" Barker</name>
+            <organization>NestedVariables</organization>
+            <organizationUrl>https://nestedvar.dev/</organizationUrl>
+            <roles>
+                <role>Owner</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <!-- Can also be found at FirestarterMC https://firestartermc.com -->
+            <name>Mykyta "TechToolbox" Komarnytskyy</name>
+            <organization>NestedVariables</organization>
+            <organizationUrl>https://nestedvar.dev</organizationUrl>
+            <roles>
+                <role>Owner</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Gabe "Flamingo" Kotton</name>
+            <organization>NestedVariables</organization>
+            <organizationUrl>https://nestedvar.dev</organizationUrl>
+            <roles>
+                <role>Owner</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- JDA Java Discord API Wrapper -->
+        <!-- https://github.com/DV8FromTheWorld/JDA -->
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>4.1.1_146</version>
+        </dependency>
+
+        <!-- Sedmelluq's Lavaplayer JDA Audio Sending Node -->
+        <!-- https://github.com/sedmelluq/lavaplayer -->
+        <dependency>
+            <groupId>com.sedmelluq</groupId>
+            <artifactId>lavaplayer</artifactId>
+            <version>1.3.34</version>
+        </dependency>
+
+        <!-- Jagrosh's JDA Utilities Library -->
+        <!-- https://github.com/JDA-Applications/JDA-Utilities -->
+        <dependency>
+            <groupId>com.jagrosh</groupId>
+            <artifactId>jda-utilities</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
+            <type>pom</type>
+        </dependency>
+
+        <!-- Duncte123's BotCommons Library -->
+        <!-- https://github.com/duncte123/botCommons -->
+        <dependency>
+            <groupId>me.duncte123</groupId>
+            <artifactId>botCommons</artifactId>
+            <version>1.0.78</version>
+        </dependency>
+
+        <!-- Logback Classic -->
+        <!-- http://logback.qos.ch/ -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- Reactive Streams Asynchronous MongoDB Driver -->
+        <!-- https://www.reactive-streams.org/ -->
+        <dependency>
+            <groupId>org.reactivestreams</groupId>
+            <artifactId>reactive-streams</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+        <!-- MongoDB Synchronous Java Driver !!BACKUP ONLY!! -->
+        <!-- https://mongodb.com -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.3</version>
+        </dependency>
+
+        <!-- JavaX Websocket API -->
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <!-- Apache HTTP -->
+        <!-- https://hc.apache.org/ -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.7</version>
+        </dependency>
+
+        <!-- Google Simple JSON API -->
+        <!-- https://code.google.com/archive/p/json-simple/ -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <!-- Dotenv Java Library -->
+        <!-- https://github.com/cdimascio/java-dotenv -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>java-dotenv</artifactId>
+            <version>5.1.3</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Shade Plugin -->
+            <!-- https://maven.apache.org/plugins/maven-shade-plugin/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>dev.nestedvar.Discord.Quiver</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
