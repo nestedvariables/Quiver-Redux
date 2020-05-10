@@ -1,0 +1,67 @@
+{
+  "name": "Quiver",
+  "premiumName": "Bullseye",
+  "avaiableLocales": "The current list of available locales are: \n\n```\n[locales]\n```",
+
+  "permissions": {
+    "insufficientPermissionsEmbedFooter": "Insufficient Permissions",
+
+    "insufficientPermissionsNoAdmin": "The owner of this has disabled the ability for admins to use this command",
+    "insufficientPermissionsOwnerAdmin": "You need to have the [adminrole] role, or you need to be the Owner of the server to use this command",
+    "insufficientPermissionsAdmin": "You need the administrator role of this server to use this command",
+    "insufficientPermissionsModerator": "You need the moderator role of this server to use this command"
+  },
+
+  "ban" : {
+    "insufficientPermissions": "You do not have sufficient permissions to use the ban command on this guild"
+  },
+
+
+  "settings": {
+    "help": "Configure settings for the server",
+    "insufficientArguments": "You need to tell me what setting you want to configure!",
+    "insufficientPrefixArguments": "I need to know what you would like to use as this server's prefix",
+    "insufficientLocaleArguments": "I need to know what locale you wanted to use for future messages",
+    "insufficientLogChannelArguments": "I need to know which channel you want to use as a logging channel",
+    "insufficientJoinLeaveLogArguments": "I need to know which channel you want to use as a join/leave log",
+    "insufficientOwnerRoleArguments": "I need to to know which role you want to use as the Owner Role",
+    "insufficientAdminRoleArguments": "I need to know which role you want to use as the Administrator role",
+    "insufficientModRoleArguments": "I need to know which role you want to use as the Moderator Role",
+    "insufficientResetArguments": "What setting did you want to reset/remove?",
+    "setPrefixSuccess": "Successfully set the prefix for all future commands to `[prefix]`",
+    "setPrefixSuccessLog": "[member] has set the prefix for all future commands to `[prefix]`",
+    "setLocaleSuccess": "Successfully set the locale to `[locale]`",
+    "setLocaleSuccessLog": "[member] has set the locale to `[locale]`",
+    "setLogChannelSuccess": "Successfully set the log channel to [channel]",
+    "setLogChannelSuccessLog": "[member] has set the log channel to [channel]",
+    "setJoinLeaveLogSuccess": "Successfully set the Join/Leave Log to [channel]",
+    "setJoinLeaveLogSuccessLog": "[member] has set the Join/Leave Log to [channel]",
+    "setAdministratorRoleSuccess": "Successfully set the Administrator role to [role]",
+    "setAdministratorRoleSuccessLog": "[member] has set the Administrator role to [role]",
+    "setModeratorRoleSuccess": "Successfully set the Moderator role to [role]",
+    "setModeratorRoleSuccessLog": "[member] has set the Moderator role to [role]",
+    "setDefaultPrefixSuccess": "Successfully reset the prefix to `Q!`",
+    "setDefaultPrefixSuccessLog": "[member] has reset the prefix to `Q!`",
+    "setDefaultLocaleSuccess": "Successfully reset the language setting to the default for this guild based on this guild's location `[locale]`",
+    "setDefaultLocaleSuccessLog": "[member] has reset the language setting to the default for this guild based on this guild's location `[locale]`",
+    "removeLogChannelSuccess": "Successfully removed the log channel",
+    "removeLogChannelSuccessLog": "[member] has removed the log channel",
+    "removeJoinLeaveLogSuccess": "Successfully removed the join/leave log channel",
+    "removeJoinLeaveLogSuccessLog": "[member] has removed the join/leave log channel",
+    "removeAdministratorRoleSuccess": "Successfully removed the Administrator role",
+    "removeAdministratorRoleSuccessLog": "[member] has removed the Administrator role",
+    "removeModeratorRoleSuccess": "Successfully removed the Moderator role",
+    "removeModeratorRoleSuccessLog": "[member] has removed the Moderator role",
+    "embedFooterPrefixChangeLog": "Prefix Change Log",
+    "embedFooterLocaleChangeLog": "Locale Change Log",
+    "embedFooterLogChannelChangeLog": "Log Channel Change Log",
+    "embedFooterJoinLogChannelChangeLog": "Join/Leave Log Channel Change Log",
+    "embedFooterAdministratorRoleChangeLog": "Administrator Role Change Log",
+    "embedFooterModeratorRoleChangeLog": "Moderator Role Change Log"
+  },
+
+  "list": {
+    "help": "List options that are available for the settings command",
+    "optionsInsufficientArguments": "What options did you want to list?"
+  }
+}
